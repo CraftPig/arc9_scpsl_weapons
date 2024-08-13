@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+
+    //$alphatest 1
+    $translucent 1
+    $additive 1
+	$envmap "env_cubemap"
+	$envmaptint [0 0 0]
+	$nocull 1
+}

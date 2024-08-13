@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	//"$basetexture" "models/weapons/scpsl/injector/GLASS"
+//$alphatest 1
+$translucent 1
+$additive 1
+
+	//$bumpmap "models/weapons/scpsl/injector/main_n"
+	$envmap "env_cubemap"
+	$envmaptint [0 0 0]
+	$nocull 1
+}

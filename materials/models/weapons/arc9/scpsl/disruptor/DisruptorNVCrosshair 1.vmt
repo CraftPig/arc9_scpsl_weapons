@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"models\weapons\arc9\scpsl\disruptor\DisruptorNVCrosshair 1"
+	"$translucent"  "1"
+	"$additive"		"0"
+}
