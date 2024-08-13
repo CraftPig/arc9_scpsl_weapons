@@ -375,7 +375,7 @@ SWEP.ExitSightsSound = "scpsl_FSP9_adsout"
 SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
-SWEP.DefaultBodygroups = "0"
+SWEP.DefaultBodygroups = "0000000000000"
 
 SWEP.AttachmentElements = {
     ["e11_mag"] = { Bodygroups = {{1,0},},},

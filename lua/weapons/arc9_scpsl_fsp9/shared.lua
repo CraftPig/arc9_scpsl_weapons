@@ -383,11 +383,11 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 	end
 end
 
-SWEP.DefaultBodygroups = "0"
+SWEP.DefaultBodygroups = "0000000"
 
 SWEP.AttachmentElements = {
     ["fsp9_iron"] = { Bodygroups = {{4,0},},},
-	["fuck"] = { Bodygroups = {{4,1},},},
+	["fsp9_iron_none"] = { Bodygroups = {{4,1},},},
 	["fsp9_stock"] = { Bodygroups = {{6,0},},},
 	["fsp9_stock_ext"] = { Bodygroups = {{6,1},},},
 	["fsp9_stock_none"] = { Bodygroups = {{6,2},},},
@@ -430,7 +430,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
 		Bone = "main",
         Category = { "scpsl_fsp9_optic", "scp5k_optic", "csgo_optic", "cod2019_optic" },
-		InstalledElements = {"fuck"},
+		InstalledElements = {"fsp9_iron_none"},
 		CorrectiveAng = Angle(-1.65, 1.2, 0),
 		Pos = Vector(-0, -2.8, -0),
         Ang = Angle(-90, 0, -90),
@@ -605,8 +605,7 @@ SWEP.Animations = {
     },
 	["holster"] = {
         Source = {"draw"},
-        MinProgress = 0.5,
-        FireASAP = true,
+        Time = 0.5,
 		Reverse = true,
     },
     --------------------------------------------------- Reload

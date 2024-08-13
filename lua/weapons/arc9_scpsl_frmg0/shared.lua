@@ -371,7 +371,7 @@ SWEP.ExitSightsSound = ""
 -------------------------------------------------------------------------------------------------------
 -- Attachments ----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
-SWEP.DefaultBodygroups = "0"
+SWEP.DefaultBodygroups = "000000000000000"
 
 
 
@@ -379,7 +379,7 @@ SWEP.AttachmentElements = {
     ["frmg0_drum_ap"] = { Bodygroups = {{15,1},},},
 	["frmg0_drum_fmj"] = { Bodygroups = {{15,0},},},
 	["frmg0_optic_iron"] = { Bodygroups = {{13,0},},},
-	-- ["frmg0_optic_none"] = { Bodygroups = {{13,1},},},
+	["frmg0_optic_none"] = { Bodygroups = {{13,1},},},
 	["frmg0_sightrail_none"] = { Bodygroups = {{12,1},},},
 	["frmg0_sightrail"] = { Bodygroups = {{12,0},},},
 	["frmg0_sightrail_nv"] = { Bodygroups = {{12,1},},},
@@ -453,7 +453,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
 		Bone = "main",
         Category = { "scpsl_frmg0_optic", "scp5k_optic", "csgo_optic", "cod2019_optic" },
-		InstalledElements = {"frmg0_optic_iron_none"},
+		InstalledElements = {"frmg0_optic_none"},
 		UnInstalledElements = {"frmg0_optic_iron"},
 		RequireElements = {"frmg0_sightrail"},
 		CorrectiveAng = Angle(-2.5, 1.05, 0),
@@ -465,7 +465,7 @@ SWEP.Attachments = {
         PrintName = "Rail",
 		Bone = "main",
         Category = "scpsl_frmg0_rail",
-		InstalledElements = {"frmg0_optic_iron_none", "frmg0_sightrail_none"},
+		InstalledElements = {"frmg0_optic_none", "frmg0_sightrail_none"},
 		UnInstalledElements = { "frmg0_sightrail"},
 		Pos = Vector(-0, 0, -0),
         Ang = Angle(-90, 0, -90),
