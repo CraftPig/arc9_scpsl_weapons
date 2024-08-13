@@ -8,6 +8,8 @@ SCPSL weapons ported to GMod using the ARC9 base with most of their attachments 
 
 [Gunsmith Reloaded Attachments](https://steamcommunity.com/workshop/filedetails/?id=2910537020) 
 ## 🔽 Links
+[Workshop Page](https://steamcommunity.com/sharedfiles/filedetails/?id=3308554796)
+
 [My Discord](https://discord.gg/2vwdkHzcYv)
 
 ## 🔽 Credits
