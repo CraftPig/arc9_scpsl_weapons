@@ -15,7 +15,7 @@ SWEP.Category = "ARC9 - SCP:SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
-SWEP.PrintName = "COM18"
+SWEP.PrintName = "COM-18"
 SWEP.TrueName = "HK P30"
 
 SWEP.Slot = 1

@@ -70,7 +70,7 @@ ATT.Category = {"scpsl_frmg0_rail"}
 ATT.Free = false
 -- ATT.ActivateElements = {"frmg0_sightrail_nv"}
 
-ATT.AimDownSightsTimeAdd = 0.1
+ATT.AimDownSightsTimeAdd = 0.25
 ATT.VisualRecoilPunchMultSights = 0
 
 ATT.Model = "models/weapons/arc9/scpsl/frmg0/att_frmg0_telescopic.mdl"
@@ -235,7 +235,7 @@ ATT.CustomPros = {
     ["Bullet Tracer"] = "Less Visible",
 }
 ATT.CustomCons = {
-    ["Barrel Length"] = "+6%",
+    ["Length"] = "+6%",
 }
 
 ATT.Free = false
@@ -267,7 +267,7 @@ ATT.CustomPros = {
     ["Bullet Tracer"] = "Less Visible",
 }
 ATT.CustomCons = {
-    ["Barrel Length"] = "+6%",
+    ["Length"] = "+6%",
 }
 
 ATT.Free = false
@@ -296,7 +296,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
 ATT.Category = {"scpsl_frmg0_muzzle"}
 ATT.CustomCons = {
-    ["Barrel Length"] = "+8%",
+    ["Length"] = "+8%",
 }
 
 ATT.Free = false
@@ -325,7 +325,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
 ATT.Category = {"scpsl_frmg0_stock"}
 ATT.CustomCons = {
-    ["Barrel Length"] = "+1%",
+    ["Length"] = "+1%",
 }
 
 ATT.Free = false
@@ -351,7 +351,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
 ATT.Category = {"scpsl_frmg0_barrel"}
 ATT.CustomPros = {
-    ["Barrel Length"] = "-10%",
+    ["Length"] = "-10%",
 }
 
 ATT.Free = false
@@ -528,7 +528,7 @@ ATT.ModelOffset = Vector(-0.1, -0, 0)
 ATT.ModelAngleOffset = Angle(-0, 0, -90)
 
 ATT.CustomCons = {
-    ["Barrel Length"] = "+92%",
+    ["Length"] = "+92%",
 }
 ATT.CustomPros = {
     ["Silencer"] = "True",
@@ -656,7 +656,7 @@ ATT.Free = false
 ATT.ActivateElements = {"e11_rail_long"}
 
 ATT.CustomCons = {
-["Barrel Length"] = "+20%",
+["Length"] = "+20%",
 }
 ATT.DamageMaxMult = 1.15
 ATT.DamageMinMult = 1.15
@@ -777,7 +777,7 @@ ATT.Free = false
 ATT.ActivateElements = {"e11_stocklight"}
 
 ATT.CustomPros = {
-["Barrel Length"] = "-1%",
+["Length"] = "-1%",
 }
 ATT.SpreadMultHipFire = 0.82
 ATT.RecoilMultSighted = 1.25
@@ -801,7 +801,7 @@ ATT.Free = false
 ATT.ActivateElements = {"e11_stockheavy"}
 
 ATT.CustomPros = {
-["Barrel Length"] = "-1%",
+["Length"] = "-1%",
 }
 ATT.RecoilMultSighted = 0.67
 ATT.BarrelLengthMult = 0.99
@@ -993,7 +993,7 @@ ATT.CustomPros = {
     ["Bullet Tracer"] = "Less Visible",
 }
 ATT.CustomCons = {
-    ["Barrel Length"] = "+2%",
+    ["Length"] = "+2%",
 }
 
 ATT.Free = false
@@ -1023,7 +1023,7 @@ ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
 ATT.Category = {"scpsl_e11_muzzle"}
 
 ATT.CustomCons = {
-    ["Barrel Length"] = "+1%",
+    ["Length"] = "+1%",
 }
 ATT.Free = false
 ATT.MuzzleDevice = false
@@ -1060,7 +1060,7 @@ ATT.ModelOffset = Vector(-0.1, -0, 0)
 ATT.ModelAngleOffset = Angle(-0, 0, 90)
 
 ATT.CustomCons = {
-    ["Barrel Length"] = "+1%",
+    ["Length"] = "+1%",
 }
 ATT.RPMMult = 1.1
 ATT.RecoilMult = 1.3
@@ -1091,7 +1091,7 @@ ATT.ModelOffset = Vector(-0, -0, 0)
 ATT.ModelAngleOffset = Angle(-0, 0, 90)
 
 ATT.CustomCons = {
-    ["Barrel Length"] = "+20%",
+    ["Length"] = "+20%",
 }
 ATT.CustomPros = {
     ["Silencer"] = "True",
@@ -1102,5 +1102,333 @@ ATT.SpreadMult = 0.89
 
 ARC9.LoadAttachment(ATT, "scpsl_e11_silencer")
 --[[ -----------------------------------------------------------------------------------------------------------
---------- COM18
+--------- COM15
 ]] -------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Extended JHP Magazine"
+ATT.CompactName = "Ext. JHP Mag"
+ATT.Icon = Material("entities/attachments/com18/mag21jhp.png", "mips smooth") 
+ATT.Description = ""
+
+-- ATT.Folder = "SCP: SL"
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"com15_mag_ext"}
+
+ATT.Free = false
+ATT.ActivateElements = {"com18_mag_bottomext"}
+
+ATT.ReloadTimeMult = 1.15
+ATT.ClipSizeMult = 1.45
+ATT.SpeedAdd = -0.03
+
+ATT.Hook_TranslateAnimation = function(wep, anim)
+    return anim .. "_ext"
+end
+
+ARC9.LoadAttachment(ATT, "scpsl_com15_extjhpmag")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Suppressor"
+ATT.CompactName = "Suppressor"
+ATT.Icon = Material("entities/attachments/com18/suppressor.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_com15_muzzle"}
+
+ATT.Free = false
+ATT.MuzzleDevice = false
+ATT.Silencer = true
+ATT.MuzzleParticle = { "muzzleflash_suppressed" }
+ATT.Model = "models/weapons/arc9/scpsl/com15/att_com15_silencer.mdl"
+ATT.Scale = 0.9
+ATT.ModelOffset = Vector(-0.25, 0.05, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, -90)
+
+ATT.CustomCons = {
+    ["Length"] = "+92%",
+}
+ATT.CustomPros = {
+    ["Silencer"] = "True",
+}
+ATT.BarrelLengthMult = 1.92
+ATT.SpeedAdd = -0.02
+ATT.SpreadMult = 0.75
+
+ARC9.LoadAttachment(ATT, "scpsl_com15_silencer")
+--[[ -----------------------------------------------------------------------------------------------------------
+--------- CROSSVEC
+]] -------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Low-cap AP Mag"
+ATT.CompactName = "AP Mag"
+ATT.Icon = Material("entities/attachments/crossvec/lowcapapmag.png", "mips smooth") 
+ATT.Description = ""
+
+-- ATT.Folder = "SCP: SL"
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"crossvec_mag"}
+
+ATT.Free = false
+ATT.ActivateElements = {"crossvec_mag_ap"}
+
+ATT.ClipSizeMult = 0.75
+ATT.SpeedAdd = 0.03
+ATT.DamageMaxMult = 1.05
+ATT.DamageMinMult = 0.9
+ATT.ArmorPiercingMult = 1.25
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_apmag")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Retracted Stock"
+ATT.CompactName = "Folded Stock"
+ATT.Icon = Material("entities/attachments/crossvec/collapsedstock.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_stock"}
+
+ATT.Free = false
+ATT.ActivateElements = {"crossvec_stock_folded"}
+
+ATT.CustomPros = {
+    ["Equip Time"] = "Decreased",
+	["Length"] = "-33%",
+}
+ATT.SpreadMultSighted = 1.38
+ATT.RecoilMultSighted = 2
+ATT.BarrelLengthMult = 0.67
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_stockfolded")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Extended Barrel"
+ATT.CompactName = "Ext. Barrel"
+ATT.Icon = Material("entities/attachments/crossvec/barrelextended.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_barrel"}
+
+ATT.Free = false
+ATT.ActivateElements = {"crossvec_barrel_extended"}
+
+-- ATT.CustomCons = {
+    -- ["Barrel Length"] = "+92%",
+-- }
+ATT.CustomCons = {
+    ["Length"] = "+45%",
+}
+ATT.SpreadMult = 0.8
+ATT.SpeedAdd = -0.025
+ATT.BarrelLengthMult = 1.45
+ATT.DamageMaxMult = 1.05
+ATT.DamageMinMult = 1.05
+ATT.ArmorPiercingMult = 1.1
+ATT.RecoilMult = 1.1
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_barrelext")
+----------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Holographic Sight"
+ATT.CompactName = "Holo Sight"
+ATT.Icon = Material("entities/attachments/crossvec/holo.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_optic"}
+
+ATT.Free = false
+ATT.CustomPros = {
+    ["ADS Zoom"] = "1x",
+}
+
+ATT.Model = "models/weapons/arc9/scpsl/crossvec/att_crossvec_holo.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0.1, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, 0)
+ATT.Sights = {
+    {
+        Pos = Vector(-0, 10, -1.15),
+        Ang = Angle(0, 0.7, 0),
+        Magnification = 1.1,
+        ViewModelFOV = 55,
+        IgnoreExtra = false
+    },
+}
+
+ATT.HoloSight = true
+ATT.HoloSightReticle = Material("models/weapons/arc9/scpsl/attachments/HoloSight_Blue_1") 
+ATT.HoloSightSize = 500
+ATT.HoloSightColorable = false
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_holosight")
+----------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Dot Sight"
+ATT.CompactName = "Dot Sight"
+ATT.Icon = Material("entities/attachments/crossvec/dotsight.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_optic"}
+
+ATT.Free = false
+ATT.CustomPros = {
+    ["ADS Zoom"] = "1x",
+}
+
+ATT.Model = "models/weapons/arc9/scpsl/crossvec/att_crossvec_reddot.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0.1, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, 0)
+ATT.Sights = {
+    {
+        Pos = Vector(-0, 10, -1.45),
+        Ang = Angle(0, 0.0, 0),
+        Magnification = 1.1,
+        ViewModelFOV = 55,
+        IgnoreExtra = false
+    },
+}
+
+ATT.HoloSight = true
+ATT.HoloSightReticle = Material("models/weapons/arc9/scpsl/attachments/BlueDot") 
+ATT.HoloSightSize = 500
+ATT.HoloSightColorable = false
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_reddot")
+----------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Night-Vision Scope"
+ATT.CompactName = "NV Scope"
+ATT.Icon = Material("entities/attachments/crossvec/nvscope.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_optic"}
+
+ATT.Free = false
+-- ATT.ActivateElements = {"frmg0_sightrail_nv"}
+
+ATT.Model = "models/weapons/arc9/scpsl/crossvec/att_crossvec_scope.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(2.0, -0, 0.0)
+ATT.ModelAngleOffset = Angle(-0, 0, 0)
+ATT.Sights = {
+    {
+        Pos = Vector(-0, 10, -1.673),
+        Ang = Angle(0, 0.0, 0),
+        Magnification = 1.05,
+        ViewModelFOV = 40,
+        IgnoreExtra = false
+    },
+}
+
+ATT.SpeedAdd = -0.03
+ATT.VisualRecoilPunchMultSights = -5
+ATT.AimDownSightsTimeAdd = 0.2
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 18
+ATT.RTScopeRes = 512
+-- ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
+ATT.RTScopeReticle = Material("models/weapons/arc9/scpsl/attachments/RevolverCrosshair", "mips smooth")
+ATT.RTScopeReticleScale = 1.1
+ATT.RTScopeShadowIntensity = 1
+ATT.RTScopeNoPP = false
+ATT.RTScopeColorable = false
+ATT.RTScopeNightVision = true 
+ATT.RTScopeNightVisionMonochrome = true
+ATT.RTScopeNightVisionCC = {
+    ["$pp_colour_addr"] = 0.1,
+    ["$pp_colour_addg"] = 0.6,
+    ["$pp_colour_addb"] = 0.75,
+    ["$pp_colour_brightness"] = -0.3,
+    ["$pp_colour_contrast"] = 0.8,
+    ["$pp_colour_colour"] = 1,
+}
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_nvscope")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Suppressor"
+ATT.CompactName = "Suppressor"
+ATT.Icon = Material("entities/attachments/crossvec/suppressor.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_muzzle"}
+
+ATT.Free = false
+ATT.MuzzleDevice = false
+ATT.Silencer = true
+ATT.MuzzleParticle = { "muzzleflash_suppressed" }
+ATT.Model = "models/weapons/arc9/scpsl/crossvec/att_crossvec_suppressor.mdl"
+ATT.Scale = 0.9
+ATT.ModelOffset = Vector(-0.25, 0.07, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, -90)
+
+ATT.CustomCons = {
+    ["Length"] = "+29%",
+}
+ATT.CustomPros = {
+    ["Silencer"] = "True",
+}
+ATT.BarrelLengthMult = 1.29
+ATT.SpeedAdd = -0.017
+ATT.SpreadMult = 0.75
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_suppressor")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Flash Hider"
+ATT.CompactName = "Flash Hider"
+ATT.Icon = Material("entities/attachments/crossvec/flashhider.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_crossvec_muzzle"}
+
+ATT.Free = false
+ATT.MuzzleDevice = false
+ATT.Silencer = false
+ATT.MuzzleParticle = { "muzzleflash_2" }
+ATT.Model = "models/weapons/arc9/scpsl/crossvec/att_crossvec_flashhider.mdl"
+ATT.Scale = 0.9
+ATT.ModelOffset = Vector(-0.25, 0.07, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, -90)
+
+ATT.CustomPros = {
+    ["Bullet Tracer"] = "Less Visible",
+}
+ATT.CustomCons = {
+    ["Length"] = "+6%",
+}
+ATT.TracerSize = 1
+ATT.RecoilMult = 0.98
+ATT.BarrelLengthMult = 1.06
+ATT.SpeedAdd = -0.01
+
+ARC9.LoadAttachment(ATT, "scpsl_crossvec_flashhider")

@@ -330,7 +330,7 @@ SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
 SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 220) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
-SWEP.TracerSize = 3
+SWEP.TracerSize = 2
 
 -- Camera ------------------------------------------------------------------------------------------------
 SWEP.CamQCA = 3 -- QC Attachment for camera movement.
@@ -383,7 +383,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 	end
 end
 
-SWEP.DefaultBodygroups = "0000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.AttachmentElements = {
     ["fsp9_iron"] = { Bodygroups = {{4,0},},},

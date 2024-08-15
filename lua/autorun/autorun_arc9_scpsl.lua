@@ -495,10 +495,20 @@ sound.Add( {
 
 ------------------------------------------------------ Crossvec 
 sound.Add( {
-    name = "scpsl_crossvec_boltback",
+    name = "scpsl_crossvec_fire",
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 120,
+    pitch = {97, 103},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecFire.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_boltback",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
     pitch = {90, 100},
     sound = {
         "weapons/arc9/scpsl/crossvec/CrossvecHandlePull.wav",
@@ -508,10 +518,110 @@ sound.Add( {
     name = "scpsl_crossvec_boltforward",
     channel = CHAN_WEAPON,
     volume = 1.0,
-    level = 120,
+    level = 65,
     pitch = {90, 100},
     sound = {
         "weapons/arc9/scpsl/crossvec/CrossvecHandleRelease.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_adsdown",
+    channel = CHAN_ITEM,
+    volume = 0.2,
+    level = 55,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecAdsDown.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_adsup",
+    channel = CHAN_ITEM,
+    volume = 0.2,
+    level = 55,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecAdsUp.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_equip",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecEquip.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_equipstock",
+    channel = CHAN_WEAPON,
+    volume = 0.4,
+    level = 65,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecEquipStock.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_magout",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecMagRemove.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_magin",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecMagInsert.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_boltrelease",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecBoltRelease.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_inspect1",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecInspect 0.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_inspect2",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecInspect 1.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_crossvec_inspect3",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {90, 100},
+    sound = {
+        "weapons/arc9/scpsl/crossvec/CrossvecInspect 2.wav",
     }
 } )
 
