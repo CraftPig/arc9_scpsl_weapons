@@ -442,6 +442,7 @@ SWEP.Attachments = {
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
 SWEP.NoFireDuringSighting = true
+SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 SWEP.Animations = {
     ["idle"] = {
