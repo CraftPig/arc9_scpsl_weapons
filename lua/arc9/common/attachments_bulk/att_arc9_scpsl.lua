@@ -4,25 +4,56 @@ local ATT = {}
 --[[ -----------------------------------------------------------------------------------------------------------
 --------- Disruptor
 ]] -------------------------------------------------------------------------------------------------------------
--- ATT = {}
+ATT = {}
 
--- ATT.PrintName = "Remove NV"
--- ATT.CompactName = "Remove NV"
--- ATT.Icon = Material("entities/attachments/frmg0/Mag60AP.png", "mips smooth") 
--- ATT.Description = ""
+ATT.PrintName = "Scope"
+ATT.CompactName = "Scope"
+ATT.Icon = Material("entities/attachments/wrench.png", "mips smooth") 
+ATT.Description = ""
 
--- ATT.Folder = "SCP: SL"
--- ATT.SortOrder = 1
--- ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
--- ATT.Category = {"scpsl_disruptor_optic"}
+ATT.Folder = "SCP: SL"
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_disruptor_optic"}
 
--- ATT.Free = false
+ATT.Free = false
 
--- ATT.CustomPros = {
-    -- ["Reload Time"] = "-0.5s",
--- }
+ATT.Model = "models/weapons/arc9/scpsl/disruptor/att_disruptor_scope.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-6.0, -2.1, -13.5)
+ATT.ModelAngleOffset = Angle(-0, 0, 0)
+ATT.Sights = {
+    {
+        Pos = Vector(-2.185, 4.25, -10.39),
+        Ang = Angle(-1, 0, 0),
+        Magnification = 1.1,
+        ViewModelFOV = 55,
+        IgnoreExtra = false
+    },
+}
 
--- ARC9.LoadAttachment(ATT, "scpsl_disruptor_removenv")
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 18
+ATT.RTScopeRes = 512
+ATT.RTScopeReticle = Material("models/weapons/arc9/scpsl/disruptor/DisruptorNVCrosshair 1", "mips smooth")
+ATT.HoloSightSize = 300
+ATT.RTScopeReticleScale = 1.25
+ATT.RTScopeShadowIntensity = 1
+ATT.RTScopeNoPP = false
+ATT.RTScopeColorable = false
+ATT.RTScopeNightVision = true 
+ATT.RTScopeNightVisionMonochrome = true
+ATT.RTScopeNightVisionCC = {
+    ["$pp_colour_addr"] = 0.1,
+    ["$pp_colour_addg"] = 0.6,
+    ["$pp_colour_addb"] = 0.75,
+    ["$pp_colour_brightness"] = -0.6,
+    ["$pp_colour_contrast"] = 0.8,
+    ["$pp_colour_colour"] = 1,
+}
+
+ARC9.LoadAttachment(ATT, "scpsl_disruptor_nv")
 --[[ -----------------------------------------------------------------------------------------------------------
 --------- FRMG0
 ]] -------------------------------------------------------------------------------------------------------------
@@ -718,7 +749,7 @@ ATT.ActivateElements = {"e11_low"}
 ATT.CustomPros = {
     -- ["Reload Time"] = "-0.5s",
 }
-ATT.ReloadTimeMult = 0.95
+ATT.ReloadTimeMult = 0.9
 ATT.ClipSizeMult = 0.75
 ATT.DamageMaxMult = 1.1
 ATT.DamageMinMult = 1.1
@@ -750,7 +781,7 @@ ATT.ActivateElements = {"e11_low"}
 ATT.CustomPros = {
     -- ["Reload Time"] = "-0.5s",
 }
-ATT.ReloadTimeMult = 0.95
+ATT.ReloadTimeMult = 0.9
 ATT.ClipSizeMult = 0.75
 ATT.PenetrationMult = 1.2
 ATT.ArmorPiercingMult = 1.2
@@ -1432,3 +1463,111 @@ ATT.BarrelLengthMult = 1.06
 ATT.SpeedAdd = -0.01
 
 ARC9.LoadAttachment(ATT, "scpsl_crossvec_flashhider")
+--[[ -----------------------------------------------------------------------------------------------------------
+--------- SHOTGUN
+]] -------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Double-shot system"
+ATT.CompactName = "DS System"
+ATT.Icon = Material("entities/attachments/shotgun/doubletrigger.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_shotgun_trigger"}
+
+ATT.Free = false
+
+ATT.ManualActionChamber = 1
+ATT.Num = 16
+ATT.AmmoPerShot = 2
+ATT.RPMMult = 0.67
+ATT.SpreadMult = 1.1
+
+ARC9.LoadAttachment(ATT, "scpsl_shotgun_ds")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Extended Barrel"
+ATT.CompactName = "Ext. Barrel"
+ATT.Icon = Material("entities/attachments/shotgun/extbarrel.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_shotgun_muzzle"}
+
+ATT.Free = false
+ATT.ActivateElements = {"shotgun_muzzle_barrel"}
+
+ATT.CustomCons = {
+    ["Length"] = "+17%",
+}
+ATT.SpreadMult = 0.9
+ATT.BarrelLengthMult = 1.17
+ATT.SpeedAdd = -0.02
+ATT.PenetrationMult = 1.1
+
+ARC9.LoadAttachment(ATT, "scpsl_shotgun_shortbarrel")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Choke"
+ATT.CompactName = "Choke"
+ATT.Icon = Material("entities/attachments/shotgun/choke.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_shotgun_muzzle"}
+
+ATT.Free = false
+ATT.ActivateElements = {"shotgun_muzzle_muzzle"}
+
+ATT.CustomPros = {
+    ["Increased spread consistency"] = "",
+}
+ATT.CustomCons = {
+    ["Length"] = "+10%",
+}
+ATT.SpreadMult = 1.2
+ATT.DispersionSpread = 0.0
+ATT.BarrelLengthMult = 1.1
+ATT.SpeedAdd = -0.01
+
+ARC9.LoadAttachment(ATT, "scpsl_shotgun_choke")
+-------------------------------------------------------------------------------------------------------------
+ATT = {}
+
+ATT.PrintName = "Holographic Sight"
+ATT.CompactName = "Holo Sight"
+ATT.Icon = Material("entities/attachments/shotgun/holo.png", "mips smooth")
+ATT.Description = ""
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - SCP: Secret Laboratory Attachments"
+ATT.Category = {"scpsl_shotgun_optic"}
+
+ATT.Free = false
+ATT.SpeedAdd = -0.01
+ATT.Model = "models/weapons/arc9/scpsl/shotgun/att_shotgun_holo.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(-0, 0, 0)
+ATT.Sights = {
+    {
+        Pos = Vector(-0, 10, -1.3),
+        Ang = Angle(0, 0.0, 0),
+        Magnification = 1.1,
+        ViewModelFOV = 55,
+        IgnoreExtra = false
+    },
+}
+
+ATT.HoloSight = true
+ATT.HoloSightReticle = Material("models/weapons/arc9/scpsl/attachments/HoloSight_Orange") 
+ATT.HoloSightSize = 500
+ATT.HoloSightColorable = false
+
+ARC9.LoadAttachment(ATT, "scpsl_shotgun_holo")

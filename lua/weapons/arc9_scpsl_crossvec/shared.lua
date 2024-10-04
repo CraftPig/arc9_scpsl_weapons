@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_crossvec")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -190,7 +190,7 @@ SWEP.SwayAddMidAir = 0.0 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for, set to 0 to disable holding breath
 SWEP.RestoreBreathTime = 10
-SWEP.AimDownSightsTime = 0.2 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.22 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.0 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = true
@@ -243,7 +243,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Ang = Angle(0, 0, -0),
 }
 
-SWEP.ActivePos = Vector(-0, 0.5, 0) 
+SWEP.ActivePos = Vector(-0.2, 0, 0) 
 SWEP.ActiveAng = Angle(0, -0, 0)
 
 SWEP.MovingPos =  Vector(-0, -0, -0)
@@ -340,7 +340,7 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
+SWEP.BobSprintMult = 0.35 -- 
 SWEP.BobWalkMult = 1 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
@@ -521,6 +521,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -641,7 +642,7 @@ SWEP.Animations = {
         Source = {"reload_empty"},
 		Time = 4.5,
 		DumpAmmo = false,
-        MinProgress = 0.82,
+        MinProgress = 0.65,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_crossvec_inspect1", t = 0 / 30},
@@ -700,9 +701,9 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
+        MinProgress = 0.01,
 		Time = 6,
-        FireASAP = false,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_crossvec_inspect1", t = 0 / 30},
 			{s = "scpsl_crossvec_inspect2", t = 60 / 30},

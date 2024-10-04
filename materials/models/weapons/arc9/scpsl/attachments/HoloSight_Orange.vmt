@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/scpsl/attachments/HoloSight_Orange"
+	"$color2" "[2 2 2]"
+	"$translucent"  "1"
+	"$additive"		"1"
+}

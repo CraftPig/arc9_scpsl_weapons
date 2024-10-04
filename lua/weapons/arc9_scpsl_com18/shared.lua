@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_com18")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -340,8 +340,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.25 -- 
+SWEP.BobWalkMult = 1.5 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -449,6 +449,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -502,7 +503,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = {"reload"},
 		DumpAmmo = false,
-        MinProgress = 0.6,
+        MinProgress = 0.65,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
@@ -514,7 +515,7 @@ SWEP.Animations = {
 	["reload_empty"] = {
         Source = {"reload_empty"},
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.55,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
@@ -542,8 +543,8 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
-        FireASAP = false,
+        MinProgress = 0.01,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_COM15_ins1", t = 0 / 30},
 			{s = "scpsl_COM15_ins2", t = 85 / 30},

@@ -928,3 +928,267 @@ sound.Add( {
         "weapons/arc9/scpsl/E11/E11SR Inspect 2.wav",
     }
 } )
+
+------------------------------------------------------ Shotgun
+sound.Add( {
+    name = "scpsl_Shotgun_fire1",
+    channel = CHAN_WEAPON,
+    volume = 1,
+    level = 130,
+    pitch = {95, 100},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Firing 1st.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_fire2",
+    channel = CHAN_WEAPON,
+    volume = 1,
+    level = 130,
+    pitch = {95, 100},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Firing 2nd.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_adsin",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 55,
+    pitch = {95, 115},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun ADS In.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_adsout",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 55,
+    pitch = {95, 115},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun ADS Out.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_equip",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Equip 2nd time.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_pumpin",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun PumpIn.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_pumpout",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun PumpOut.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_transition",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Reload Transition.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_searching",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Pocket Searching 3.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_shell1",
+    channel = CHAN_CHAN,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Reload 1st Shell.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_shell2",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Reload 2nd Shell.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_inspect1",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Inspect 0.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_inspect2",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Inspect 1.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_Shotgun_inspect3",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/Shotgun/Shotgun Inspect 2.wav",
+    }
+} )
+
+------------------------------------------------------ A7
+sound.Add( {
+    name = "scpsl_A7_fire1",
+    channel = CHAN_WEAPON,
+    volume = 1,
+    level = 130,
+    pitch = {95, 100},
+    sound = {
+        "weapons/arc9/scpsl/AK/A7Fire.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_A7_adsin",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 55,
+    pitch = {95, 115},
+    sound = {
+        "weapons/arc9/scpsl/AK/A7ADSEnter.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_A7_adsout",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 55,
+    pitch = {95, 115},
+    sound = {
+        "weapons/arc9/scpsl/AK/A7ADSExit.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_A7_equip",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {95, 105},
+    sound = {
+        "weapons/arc9/scpsl/AK/A7Draw.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_boltback",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {120, 130},
+    sound = {
+        "weapons/arc9/scpsl/ak/BananaInsertion.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_boltforward",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {120, 130},
+    sound = {
+        "weapons/arc9/scpsl/ak/BananaRemoval.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_magout",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {110, 120},
+    sound = {
+        "weapons/arc9/scpsl/ak/BananaEjection.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_magin",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {110, 120},
+    sound = {
+        "weapons/arc9/scpsl/ak/BananaTacticalInsertion.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_startreload",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 65,
+    pitch = {110, 120},
+    sound = {
+        "weapons/arc9/scpsl/ak/A7Reload_start.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_inspect1",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {120, 130},
+    sound = {
+        "weapons/arc9/scpsl/ak/A7Inspect_01.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_inspect2",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {110, 120},
+    sound = {
+        "weapons/arc9/scpsl/ak/AK Inspect 1.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_a7_inspect3",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {110, 120},
+    sound = {
+        "weapons/arc9/scpsl/ak/A7Inspect_02.wav",
+    }
+} )

@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_disruptor")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Special Weaponry"
 
 SWEP.AdminOnly = false
@@ -228,7 +228,7 @@ SWEP.BashCancelsReload = nil -- If bashing should immediately cancel the reload
 -------------------------------------------------------------------------------------------------------
 -- Viewmodel ------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
-SWEP.ViewModelFOVBase = 55
+SWEP.ViewModelFOVBase = 58
 
 SWEP.IronSights = {
     Pos = Vector(-1.702, -6.25, 1.74), -- (-1.845, -5.9, 1.078),
@@ -241,26 +241,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Pos = Vector(-6, 0, -0),
     Ang = Angle(0, 0, -45),
 }
-SWEP.RTScope = true
-SWEP.RTScopeSubmatIndex = 2
-SWEP.RTScopeFOV = 18
-SWEP.RTScopeRes = 512
-SWEP.RTScopeReticle = Material("models/weapons/arc9/scpsl/disruptor/DisruptorNVCrosshair 1", "mips smooth")
-SWEP.HoloSightSize = 300
-SWEP.RTScopeReticleScale = 1.25
-SWEP.RTScopeShadowIntensity = 1
-SWEP.RTScopeNoPP = false
-SWEP.RTScopeColorable = false
-SWEP.RTScopeNightVision = true 
-SWEP.RTScopeNightVisionMonochrome = true
-SWEP.RTScopeNightVisionCC = {
-    ["$pp_colour_addr"] = 0.1,
-    ["$pp_colour_addg"] = 0.6,
-    ["$pp_colour_addb"] = 0.75,
-    ["$pp_colour_brightness"] = -0.6,
-    ["$pp_colour_contrast"] = 0.8,
-    ["$pp_colour_colour"] = 1,
-}
+
 
 SWEP.ActivePos = Vector(-0, 0.3, 0.6)
 SWEP.ActiveAng = Angle(-3, 0, -0)
@@ -278,7 +259,7 @@ SWEP.CrouchAng = Angle(-0, -1, -15)
 SWEP.SprintVerticalOffset = false -- Moves vm when looking up/down while sprinting (set to false if gun clips into camera)
 SWEP.ReloadNoSprintPos = true -- No sprintpos during reloads
 SWEP.SprintPos = Vector(0, 0, 0.6)
-SWEP.SprintAng = Angle(0, -0, -0)
+SWEP.SprintAng = Angle(-3, -1, -0)
 SWEP.SprintMidPoint = {
     Pos = Vector(-0, -0, -0),
     Ang = Angle(0, 0, -0)
@@ -362,8 +343,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.25 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.35 -- 
+SWEP.BobWalkMult = 1.25 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -399,14 +380,15 @@ SWEP.AttachmentElements = {
   }
 
 SWEP.Attachments = {
-    -- {
-        -- PrintName = "Optic",
-		-- Bone = "main",
-        -- Category = { "scpsl_disruptor_optic" },
-		-- Pos = Vector(-0, -6.2, -5),
-        -- Ang = Angle(-90, 0, -90),
-        -- Icon_Offset = Vector(0, 0, 0),
-    -- },
+    {
+        PrintName = "Optic",
+		Bone = "main",
+        Category = { "scpsl_disruptor_optic" },
+		Integral = true,
+		Pos = Vector(-0, -6.2, -5),
+        Ang = Angle(-90, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
 	{
         PrintName = "Cosmetic",
         Category = {"universal_camo"},
@@ -499,7 +481,7 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
+        MinProgress = 0.01,
         FireASAP = true,
 		EventTable = {
             {s = "scpsl_disruptor_ins0", t = 15 / 30},

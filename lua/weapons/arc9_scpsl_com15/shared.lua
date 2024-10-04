@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_com15")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -49,7 +49,7 @@ SWEP.MirrorVMWM = true
      Scale = 1
  }
  -- TPIK -----------------------------------------------------------------------------------------------
-SWEP.NoTPIK = false
+SWEP.NoTPIK = true
 SWEP.TPIKnolefthand = false
 SWEP.NoTPIKVMPos = false
  -- Hold Types -----------------------------------------------------------------------------------------
@@ -270,7 +270,7 @@ SWEP.NearWallAng = Angle(0, -5, -5)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(19.5, 30, 6)
-SWEP.CustomizeRotateAnchor = Vector(12, -1, -3)
+SWEP.CustomizeRotateAnchor = Vector(18, -2, -5)
 
 -------------------------------------------------------------------------------------------------------
 -- Visuals & Effects ----------------------------------------------------------------------------------
@@ -340,8 +340,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.3 -- 
+SWEP.BobWalkMult = 1.5 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -441,6 +441,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -462,6 +463,7 @@ SWEP.Animations = {
     --------------------------------------------------- Fire
     ["fire"] = {
         Source = {"shoot"},
+		Time = 0.25,
     },
 	["fire_empty"] = {
         Source = {"shoot_empty"},
@@ -494,7 +496,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = {"reload"},
 		DumpAmmo = false,
-        MinProgress = 0.6,
+        MinProgress = 0.8,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
@@ -505,7 +507,7 @@ SWEP.Animations = {
 	["reload_empty"] = {
         Source = {"reload_empty"},
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.6,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
@@ -558,8 +560,8 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
-        FireASAP = false,
+        MinProgress = 0.01,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_COM15_ins1", t = 0 / 30},
 			{s = "scpsl_COM15_ins2", t = 65 / 30},

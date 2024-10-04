@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_fsp9")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -168,8 +168,8 @@ SWEP.VisualRecoil = 0.05
 
 SWEP.VisualRecoilCenter = Vector(0, -5, 20) -- The "axis" of visual recoil. Where your hand is.
 
-SWEP.VisualRecoilUp = 10.0 -- Vertical tilt for visual recoil.F
-SWEP.VisualRecoilUpAddSighted = -25.0
+SWEP.VisualRecoilUp = -10.0 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUpAddSighted = 15.0
 SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilSideAddSighted = 2
 SWEP.VisualRecoilRoll = 100.0 -- Roll tilt for visual recoil.
@@ -229,7 +229,7 @@ SWEP.BashCancelsReload = nil -- If bashing should immediately cancel the reload
 -------------------------------------------------------------------------------------------------------
 -- Viewmodel ------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
-SWEP.ViewModelFOVBase = 70
+SWEP.ViewModelFOVBase = 65
 
 SWEP.IronSights = {
     Pos = Vector(-2.57, -3, 0.65),
@@ -243,7 +243,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Ang = Angle(0, 0, -30),
 }
 
-SWEP.ActivePos = Vector(-0, 1.5, 0) 
+SWEP.ActivePos = Vector(-.25, 2.75, .2) 
 SWEP.ActiveAng = Angle(0, -2, 0)
 
 SWEP.MovingPos =  Vector(-0, -0, -0)
@@ -258,7 +258,7 @@ SWEP.CrouchAng = Angle(-0, -1, -15)
 
 SWEP.SprintVerticalOffset = false -- Moves vm when looking up/down while sprinting (set to false if gun clips into camera)
 SWEP.ReloadNoSprintPos = true -- No sprintpos during reloads
-SWEP.SprintPos = Vector(-0, 0.5, 0) 
+SWEP.SprintPos = Vector(-.25, 2.25, .2) 
 SWEP.SprintAng = Angle(-0, -2, -0)
 SWEP.SprintMidPoint = {
     Pos = Vector(-0, -0, -0),
@@ -340,8 +340,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.35 -- 
+SWEP.BobWalkMult = 1.25 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -493,6 +493,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -613,7 +614,7 @@ SWEP.Animations = {
         Source = {"reload"},
 		Time = 3.5,
 		DumpAmmo = false,
-        MinProgress = 0.6,
+        MinProgress = 0.75,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_FSP9_inspect_1", t = 0 / 30},
@@ -649,7 +650,7 @@ SWEP.Animations = {
         Source = {"reload_empty"},
 		Time = 4.5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.56,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_FSP9_inspect_1", t = 0 / 30},
@@ -709,9 +710,9 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
+        MinProgress = 0.01,
 		Time = 6,
-        FireASAP = false,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_FSP9_inspect_1", t = 0 / 30},
 			{s = "scpsl_FSP9_inspect_2", t = 60 / 30},

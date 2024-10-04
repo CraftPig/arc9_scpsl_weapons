@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_frmg0")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -128,7 +128,7 @@ SWEP.InfiniteAmmo = false -- Weapon does not take from reserve ammo
 SWEP.BottomlessClip = false -- Weapon never has to reload
 
 -- Spread ---------------------------------------------------------------------------------------------
-SWEP.Spread = 0.07
+SWEP.Spread = 0.065
 
 SWEP.SpreadAddMove = 0.09 -- Applied when speed is equal to walking speed.
 SWEP.SpreadAddMidAir = 0.04 * 6 -- Applied when not touching the ground.
@@ -190,7 +190,7 @@ SWEP.SwayAddMidAir = 0.0 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for, set to 0 to disable holding breath
 SWEP.RestoreBreathTime = 10
-SWEP.AimDownSightsTime = 0.2 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.27 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.0 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = true
@@ -259,7 +259,7 @@ SWEP.CrouchAng = Angle(-0, -1, -15)
 SWEP.SprintVerticalOffset = false -- Moves vm when looking up/down while sprinting (set to false if gun clips into camera)
 SWEP.ReloadNoSprintPos = true -- No sprintpos during reloads
 SWEP.SprintPos = Vector(-0, -1, 0.25) 
-SWEP.SprintAng = Angle(-2, -1, -0)
+SWEP.SprintAng = Angle(-3, -3, -0)
 SWEP.SprintMidPoint = {
     Pos = Vector(-0, -0, -0),
     Ang = Angle(0, 0, -0)
@@ -340,8 +340,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.4 -- 
+SWEP.BobWalkMult = 1.5 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -527,6 +527,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -637,7 +638,7 @@ SWEP.Animations = {
         Source = {"reload_empty_fmj"},
 		Time = 5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.5,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_FRMG0_inspect_fmj_2", t = 0 / 30},
@@ -712,7 +713,7 @@ SWEP.Animations = {
         Source = {"reload_empty_ap"},
 		Time = 5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.5,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_FRMG0_inspect_ap_2", t = 0 / 30},
@@ -796,8 +797,8 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect_fmj"},
-        MinProgress = 0.1,
-        FireASAP = false,
+        MinProgress = 0.01,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_FRMG0_inspect_fmj_1", t = 0 / 30},
 			{s = "scpsl_FRMG0_inspect_fmj_2", t = 50 / 30},

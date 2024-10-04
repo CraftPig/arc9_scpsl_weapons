@@ -11,7 +11,7 @@ SWEP.Spawnable = true
 -------------------------------------------------------------------------------------------------------
 SWEP.CustomSelectIcon = Material("vgui/hud/vgui_e11")
 
-SWEP.Category = "ARC9 - SCP:SL"
+SWEP.Category = "ARC9 - SCP: SL"
 SWEP.SubCategory = "Foundation Firearms"
 
 SWEP.AdminOnly = false
@@ -190,7 +190,7 @@ SWEP.SwayAddMidAir = 0.0 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for, set to 0 to disable holding breath
 SWEP.RestoreBreathTime = 10
-SWEP.AimDownSightsTime = 0.2 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.27 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.0 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = true
@@ -231,6 +231,13 @@ SWEP.BashCancelsReload = nil -- If bashing should immediately cancel the reload
 -------------------------------------------------------------------------------------------------------
 SWEP.ViewModelFOVBase = 70
 
+-- SWEP.IronSights = {
+    -- Pos = Vector(-3.38, -8, 1.5),
+    -- Ang = Angle(-2.65, -1, 3),
+    -- Magnification = 1.3,
+    -- CrosshairInSights = false,
+    -- Blur = true, 
+-- }
 SWEP.IronSights = {
     Pos = Vector(-0, -3, 0.26),
     Ang = Angle(-0, -0, 0),
@@ -340,8 +347,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.15 -- 
-SWEP.BobWalkMult = 1 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.3 -- 
+SWEP.BobWalkMult = 1.5 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -503,6 +510,7 @@ SWEP.Attachments = {
 -- Animations -----------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 SWEP.InstantSprintIdle = false -- Instantly go to idle_sprint instead of playing enter_sprint.
+SWEP.NoFireDuringSighting = true
 
 SWEP.Animations = {
     ["idle"] = {
@@ -525,6 +533,9 @@ SWEP.Animations = {
     },
 	["fire_sights"] = {
         Source = {"ads_shoot_1", "ads_shoot_2", "ads_shoot_3"},
+		MinProgress = 0.0,
+		InstantIdle = true,
+		FireASAP = true,
     },
     --------------------------------------------------- Draw & Holster
 	["ready"] = {
@@ -585,7 +596,6 @@ SWEP.Animations = {
 		    {s = "scpsl_E11_magout", t = 26 / 30},
 			{s = "scpsl_E11_inspect_2", t = 40 / 30},
 			{s = "scpsl_E11_magin", t = 48 / 30},
-			{s = "scpsl_E11_inspect_3", t = 79 / 30},
         },
 		IKTimeLine = {
             {
@@ -614,7 +624,7 @@ SWEP.Animations = {
         Source = {"reload_empty"},
 		Time = 4.5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.55,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_E11_inspect_1", t = 0 / 30},
@@ -622,7 +632,6 @@ SWEP.Animations = {
 			{s = "scpsl_E11_inspect_2", t = 25 / 30},
 			{s = "scpsl_E11_magin", t = 55 / 30},
 			{s = "scpsl_E11_boltrelease", t = 93 / 30},
-			{s = "scpsl_E11_inspect_1", t = 109 / 30},
         },
 		IKTimeLine = {
             {
@@ -687,7 +696,7 @@ SWEP.Animations = {
         Source = {"reload_empty_ext"},
 		Time = 4.5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.55,
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_E11_magout", t = 8 / 30},
@@ -728,11 +737,9 @@ SWEP.Animations = {
         MinProgress = 0.6,
         FireASAP = false,
 		EventTable = {
-		    {s = "scpsl_E11_inspect_3", t = 0 / 30},
 		    {s = "scpsl_E11_magout", t = 26 / 30},
 			{s = "scpsl_E11_inspect_2", t = 40 / 30},
 			{s = "scpsl_E11_magin", t = 48 / 30},
-			{s = "scpsl_E11_inspect_1", t = 79 / 30},
         },
 		IKTimeLine = {
             {
@@ -761,15 +768,13 @@ SWEP.Animations = {
         Source = {"reload_empty_short"},
 		Time = 4.5,
 		DumpAmmo = false,
-        MinProgress = 0.77,
+        MinProgress = 0.55,
         FireASAP = false,
 		EventTable = {
-		    {s = "scpsl_E11_inspect_1", t = 0 / 30},
 		    {s = "scpsl_E11_magout", t = 12 / 30},
 			{s = "scpsl_E11_inspect_2", t = 25 / 30},
 			{s = "scpsl_E11_magin", t = 55 / 30},
 			{s = "scpsl_E11_boltrelease", t = 93 / 30},
-			{s = "scpsl_E11_inspect_1", t = 109 / 30},
         },
 		IKTimeLine = {
             {
@@ -821,9 +826,9 @@ SWEP.Animations = {
     --------------------------------------------------- Tacticool
     ["inspect"] = {
         Source = {"inspect"},
-        MinProgress = 0.1,
+        MinProgress = 0.01,
 		Time = 6,
-        FireASAP = false,
+        FireASAP = true,
 		EventTable = {
             {s = "scpsl_E11_inspect_1", t = 0 / 30},
 			{s = "scpsl_E11_inspect_2", t = 60 / 30},
