@@ -2,20 +2,20 @@
 //https://developer.valvesoftware.com/wiki/$phong
 "VertexLitGeneric"
 {
-    "$basetexture" "models\weapons\arc9\scpsl\crossvec\new\crossvec_rgb"
-    "$bumpmap" "models\weapons\arc9\scpsl\crossvec\new\crossvec_n"
-    "$phongexponenttexture" "models\weapons\arc9\scpsl\crossvec\new\crossvec_e"
+    "$basetexture" "models\weapons\arc9\scpsl\crossvec\crossvec_rgb"
+    "$bumpmap" "models\weapons\arc9\scpsl\crossvec\crossvec_n"
+    "$phongexponenttexture" "models\weapons\arc9\scpsl\crossvec\crossvec_e"
 
     //----------------------------------------------------------------------------------------------
-    "$color2" "[.4 .4 .4]"                                     //do not touch this
+    "$color2" "[.1 .1 .1]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
 	//----------------------------------------------------------------------------------------------
 	
 	"$phong" "1"
-    "$phongboost" "2"
+    "$phongboost" "1."
     "$phongalbedotint" "1"
-    "$phongalbedoboost" "10"                                //toy around with this
-    "$phongfresnelranges" "[.2 0.3 .5]"
+    "$phongalbedoboost" "3"                                //toy around with this
+    "$phongfresnelranges" "[.5 .25 .1]"
 	
 	//----------------------------------------------------------------------------------------------
 	
@@ -30,7 +30,7 @@
     "$normalmapalphaenvmapmask" "1"
     "$envmapfresnel" "1"
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.15 0.15 0.15]"
+    "$envmaptint" "[0.2 0.2 0.2]"
 	
 	
     $detailblendmode 3

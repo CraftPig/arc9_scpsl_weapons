@@ -258,7 +258,7 @@ SWEP.CrouchAng = Angle(-0, -1, -15)
 
 SWEP.SprintVerticalOffset = false -- Moves vm when looking up/down while sprinting (set to false if gun clips into camera)
 SWEP.ReloadNoSprintPos = true -- No sprintpos during reloads
-SWEP.SprintPos = Vector(-0, -0, 0.0) 
+SWEP.SprintPos = Vector(-0, -0, -0.25) 
 SWEP.SprintAng = Angle(-3, -3, -0)
 SWEP.SprintMidPoint = {
     Pos = Vector(-0, -0, -0),
@@ -340,8 +340,8 @@ SWEP.CamQCA_Mult_ADS = nil -- Intensity for QC camera movement in ADS.
 SWEP.CamCoolView = false -- Enable to use procedural camera movement. Set CamQCA to muzzle QCA or something.
 SWEP.CamOffsetAng = Angle(0, 0, 0)
 
-SWEP.BobSprintMult = 0.25 -- 
-SWEP.BobWalkMult = 1.5 -- same but for all non sprint actions
+SWEP.BobSprintMult = 0.3 -- 
+SWEP.BobWalkMult = 1.25 -- same but for all non sprint actions
 
 -- Bones -------------------------------------------------------------------------------------------------
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -352,7 +352,7 @@ SWEP.HideBones = {
 -------------------------------------------------------------------------------------------------------
 -- Sounds ---------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
-SWEP.ShootSound               = { "scpsl_COM15_fire" }
+SWEP.ShootSound               = { "scpsl_COM18_fire" }
 -- SWEP.LayerSound               = { "" }
 -- SWEP.ShootSoundIndoor         = { "" }
 -- SWEP.LayerSoundIndoor         = { "" }
@@ -507,8 +507,8 @@ SWEP.Animations = {
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
-		    {s = "scpsl_COM15_magout", t = 6 / 30},
-			{s = "scpsl_COM15_magin", t = 35 / 30},
+		    {s = "scpsl_COM18_magout", t = 6 / 30},
+			{s = "scpsl_COM18_magin", t = 35 / 30},
 			{s = "scpsl_COM15_ins2", t = 47 / 30},
         },
     },
@@ -519,11 +519,11 @@ SWEP.Animations = {
         FireASAP = false,
 		EventTable = {
 		    {s = "scpsl_COM15_ins1", t = 0 / 30},
-		    {s = "scpsl_COM15_magout", t = 6 / 30},
-			{s = "scpsl_COM15_magin", t = 35 / 30},
+		    {s = "scpsl_COM18_magout", t = 6 / 30},
+			{s = "scpsl_COM18_magin", t = 35 / 30},
 			{s = "scpsl_COM15_ins2", t = 47 / 30},
-			{s = "scpsl_COM15_pull", t = 62 / 30},
-			{s = "scpsl_COM15_release", t = 66 / 30},
+			{s = "scpsl_COM18_pull", t = 62 / 30},
+			{s = "scpsl_COM18_release", t = 66 / 30},
         },
     },
 	["load"] = {

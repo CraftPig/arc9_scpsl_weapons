@@ -258,7 +258,7 @@ SWEP.CrouchAng = Angle(-0, -1, -15)
 
 SWEP.SprintVerticalOffset = false -- Moves vm when looking up/down while sprinting (set to false if gun clips into camera)
 SWEP.ReloadNoSprintPos = true -- No sprintpos during reloads
-SWEP.SprintPos = Vector(0, -3, 1) 
+SWEP.SprintPos = Vector(0, -3,  0.6) 
 SWEP.SprintAng = Angle(-3, -3, -0)
 SWEP.SprintMidPoint = {
     Pos = Vector(-0, -0, -0),

@@ -231,6 +231,16 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "scpsl_COM18_fire",
+    channel = CHAN_WEAPON,
+    volume = 0.8,
+    level = 130,
+    pitch = {87, 95},
+    sound = {
+        "weapons/arc9/scpsl/COM15/COM15 Firing.wav",
+    }
+} )
+sound.Add( {
     name = "scpsl_COM15_firesilenced",
     channel = CHAN_WEAPON,
     volume = 1.0,
@@ -315,7 +325,17 @@ sound.Add( {
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 70,
-    pitch = {95, 100},
+    pitch = {98, 100},
+    sound = {
+        "weapons/arc9/scpsl/COM15/COM15 Mag In.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_COM18_magin",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 70,
+    pitch = {90, 90},
     sound = {
         "weapons/arc9/scpsl/COM15/COM15 Mag In.wav",
     }
@@ -325,7 +345,17 @@ sound.Add( {
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 55,
-    pitch = {95, 100},
+    pitch = {98, 100},
+    sound = {
+        "weapons/arc9/scpsl/COM15/COM15 Mag Out.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_COM18_magout",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {90, 90},
     sound = {
         "weapons/arc9/scpsl/COM15/COM15 Mag Out.wav",
     }
@@ -341,11 +371,31 @@ sound.Add( {
     }
 } )
 sound.Add( {
+    name = "scpsl_COM18_pull",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {97, 97},
+    sound = {
+        "weapons/arc9/scpsl/COM15/COM15 SlidePull.wav",
+    }
+} )
+sound.Add( {
     name = "scpsl_COM15_release",
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 55,
     pitch = {99, 100},
+    sound = {
+        "weapons/arc9/scpsl/COM15/COM15 SlideRelease.wav",
+    }
+} )
+sound.Add( {
+    name = "scpsl_COM18_release",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 55,
+    pitch = {95, 95},
     sound = {
         "weapons/arc9/scpsl/COM15/COM15 SlideRelease.wav",
     }
